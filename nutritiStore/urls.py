@@ -1,4 +1,4 @@
-from django.urls import path #3 copy paste fro nutriti and change
+from django.urls import path 
 from . import views
 
 urlpatterns = [
@@ -6,4 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'), 
     path('login/', views.login_user, name='login'), 
     path('logout/', views.logout_user, name='logout'), 
+    path('register/', views.register_user, name='register'), 
+    path('search/', views.search, name='search'),
 ]
+

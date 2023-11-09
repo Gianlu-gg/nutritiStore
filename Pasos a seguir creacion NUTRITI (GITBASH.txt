@@ -1,0 +1,79 @@
+aso 1: Creación del directorio del proyecto "Nutriti"
+
+# Crear un directorio llamado "nutriti" en la unidad C:
+mkdir /c/nutriti
+
+# Cambiar al directorio "nutriti"
+cd /c/nutriti
+
+# Limpiar la pantalla
+clear
+
+Paso 2: Creación del entorno virtual
+
+# Crear un entorno virtual llamado "virt"
+python -m venv virt
+
+# Listar los archivos en el directorio actual para verificar la creación del entorno virtual
+ls
+
+# Activar el entorno virtual
+source virt/Scripts/activate
+
+Paso 3: Instalación de Django
+
+# Instalar Django en el entorno virtual
+pip install django
+
+# Verificar las instalaciones (listar las bibliotecas instaladas)
+pip freeze
+
+Paso 4: Creación de un nuevo proyecto de Django
+
+# Iniciar un nuevo proyecto de Django llamado "nutriti"
+django-admin startproject nutriti
+
+# Listar los archivos y directorios en el proyecto
+ls
+
+Paso 5: Creación de una aplicación "nutritiStore"
+
+# Cambiar al directorio del proyecto "nutriti"
+cd nutriti
+
+# Crear una nueva aplicación de Django llamada "nutritiStore"
+python manage.py startapp nutritiStore
+
+# Listar los archivos y directorios en el proyecto
+ls
+
+Paso 6: Iniciar el servidor de desarrollo de Django
+
+# Iniciar el servidor de desarrollo de Django
+python manage.py runserver
+
+Paso 7: Realizar migraciones iniciales
+
+# Aplicar migraciones iniciales para configurar la base de datos
+python manage.py migrate
+
+Paso 8: Crear un superusuario
+
+# Crear un superusuario interactivo (proporcionar nombre de usuario, correo electrónico y contraseña)
+winpty python manage.py createsuperuser
+# Ingresar los detalles del superusuario cuando se le solicite (por ejemplo, Usuario: Gianluca, Correo electrónico: None, Contraseña: Mica$034)
+
+Paso 9: Instalar la biblioteca Pillow
+
+
+# Instalar la biblioteca Pillow para el procesamiento de imágenes
+pip install pillow
+
+Paso 10: Realizar migraciones después de instalar Pillow
+
+
+# Crear migraciones después de instalar Pillow (si es necesario)
+python manage.py makemigrations
+
+# Aplicar las migraciones
+python manage.py migrate

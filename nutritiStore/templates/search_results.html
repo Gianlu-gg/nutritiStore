@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Search Results</h1>
+            <p class="lead fw-normal text-white-50 mb-0">You searched for: {{ query }}</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="get" action="{% url 'search' %}">
+                {% csrf_token %}
+                <input type="text" name="q" placeholder="Search..." />
+                <button type="submit" class="btn btn-secondary">Search</button>
+            </form>
+            <ul>
+                {% for result in results %}
+                    <li>{{ result }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
