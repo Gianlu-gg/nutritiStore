@@ -1,3 +1,7 @@
+******** CORRECIONES RE-ENTREGA ********
+En templates cree un register.html en el cual se puede registrar un nuevo usuario completando distintos campos, con messages y un search para para los productos que se puede visualizar en la pagina web. Los forms de Orders y customer no los implemente, dado que no tengo el cart shopping y tenia pensado hacerlo para la entrega final.
+
+
 #README
 (En un principio queria hacer la pagina de una dietetica, por eso el nombre "Nutriti")
 
