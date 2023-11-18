@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Shopping Cart</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">View Your Cart...</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cart Summary -->
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Cart Items</h2>
+                <ul>
+                    {% for item in cart_items %}
+                        <li>{{ product.name }} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>Total Amount</h2>
+                <p>Total: ${{ total_amount }}</p>
+                <form action="{% url 'checkout' %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Proceed to Checkout" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
